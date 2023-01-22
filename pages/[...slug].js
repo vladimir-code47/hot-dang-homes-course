@@ -20,12 +20,18 @@ export const getStaticPaths = async () => {
                 uri
               }
             }
+            tours {
+              nodes {
+                uri
+              }
+            }
           }
+
         `
     })
 
     return {
-        paths: data.pages.nodes.map(page=> ({
+        paths: [...data.pages.nodes, ...data.tours.nodes].map(page=> ({
             params: {
                 slug: page.uri.substring(1, page.uri.length-1).split("/")
             }

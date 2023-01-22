@@ -14,6 +14,11 @@ export const getPageStaticProps = async (context) => {
           title 
           blocksJSON
         }
+        ... on Tour {
+          id
+          title 
+          blocksJSON
+        }
       }
       acfOptionsMainMenu {
         mainMenu {
