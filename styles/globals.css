@@ -3,3 +3,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+    .btn{
+        @apply bg-yellow-500 hover:bg-yellow-600 inline-block my-2 px-4 py-2 uppercase rounded-md cursor-pointer font-bold text-white;
+    }
+}
